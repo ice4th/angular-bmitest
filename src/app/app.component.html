@@ -1,24 +1,29 @@
-<html>
+<html my-app>
 <head>
   <title>BMI</title>
 </head>
 <body>
   <h2>BODY MASS INDEX</h2>
   
-  <form>
+  <form id="form1">
     <h4>BMI Calculator</h4>
-    <label>Weight</label><br>
-    <input id="weight" type="text" placeholder="Your weight in kilograms" />
-    <br />
-    <br />
-    <label>Height</label><br>
-    <input id="height" type="text" placeholder="Your height in meters" />
-    <br />
-    <p><input type="radio" id="sex1" name="sex" value="male"> Male</p>
-    <p><input type="radio" id="sex2" name="sex" value="female"> Female</p>
-    <input class = "submit" type="button"  value="Submit" onclick="bmi()" />
+    <label>Weight(kg.)</label><br>
+    <input type="text" ng-model="weight" placeholder="weight in kilogram" /><br>
+    <label>Height(m.)</label><br>
+    <input type="text" ng-model="height" placeholder="Height in meters" />
+    <br>
+    <br>
+    <button (click) = "submit(bmi)">submit</button>
+  </form>
+
+  <form id="form2">
+    <div ngIF= "submit">
+      <p>Your BMI is:</p>
+      <!-- <div class="imgBMI"> -->
+        <!-- <img src=""> -->
+      <p>You are ...</p>
+    </div>
   </form>
 </body>
-
 </html>
 
