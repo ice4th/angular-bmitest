@@ -14,7 +14,7 @@
     <script src="js/app.js"></script>
 
     <h2>BODY MASS INDEX</h2>
-    <form id="form1">
+    <form>
       <h4>BMI Calculator</h4>
       <label>Weight(kg.)</label><br>
       <input  type="number" ng-model="weight" #Inputweight placeholder="weight in kilogram" /><br>
@@ -24,43 +24,44 @@
       <br>
       <button (click) = "submit(Inputweight.value, Inputheight.value)">submit</button>
     </form>
-
-
-      <div *ngIf="result<18.5">
-        <p>Your bmi is {{result}}</p>
-        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+    <br>
+    <div ngIf="submit">
+    <div *ngIf="result<18.5">
+      <p>Your bmi is {{result}}</p>
+      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
         
-        <p>You are underweight</p>
-      </div>
-      <div *ngIf="result>18.5 && result<=24.9">
-        <p>Your bmi is {{result}}</p>
-        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-        <p>You are normal</p>
-      </div>
+      <p>You are underweight</p>
+    </div>
+    <div *ngIf="result>18.5 && result<=24.9">
+      <p>Your bmi is {{result}}</p>
+      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+      <p>You are normal</p>
+    </div>
 
-      <div *ngIf="result>24.9 && result<=29.9">
-        <p>Your bmi is {{result}}</p>
-        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-        <p>You are overweight</p>
-      </div>
+    <div *ngIf="result>24.9 && result<=29.9">
+      <p>Your bmi is {{result}}</p>
+      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+      <p>You are overweight</p>
+    </div>
 
-      <div *ngIf="result>29.9 && result<=34.9">
-        <p>Your bmi is {{result}}</p>
-        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-        <p>You are obese</p>
-      </div>
+    <div *ngIf="result>29.9 && result<=34.9">
+      <p>Your bmi is {{result}}</p>
+      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+      <p>You are obese</p>
+    </div>
 
-      <div *ngIf="result>34.9 && result<=34.9">
-        <p>Your bmi is {{result}}</p>
-        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-        <p>You are obese</p>
-      </div>
+    <div *ngIf="result>34.9 && result<=34.9">
+      <p>Your bmi is {{result}}</p>
+      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+      <p>You are obese</p>
+    </div>
 
-      <div *ngIf="result>34.9">
-        <p>Your bmi is {{result}}</p>
-        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-        <p>You are extremly obese</p>
-      </div>
+    <div *ngIf="result>34.9">
+      <p>Your bmi is {{result}}</p>
+      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+      <p>You are extremly obese</p>
+    </div>
+    </div>
       
   </body>
 </html>
