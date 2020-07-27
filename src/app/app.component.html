@@ -22,19 +22,24 @@
       <input  ng-model="height" #Inputheight placeholder="Height in meters" />
       <br>
       <br>
-      <button (click) = "submit(Inputweight.value, Inputheight.value)">
-        submit
-      </button>
+      <button (click) = "submit(Inputweight.value, Inputheight.value)">submit</button>
     </form>
 
-    <form id="form2" >
-      <div ngIf="result">
+
+      <div *ngIf="result<18.5">
         <p>Your bmi is {{result}}</p>
         <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
         
         <p>You are underweight</p>
       </div>
-    </form>
+      <div *ngIf="result>18.5 && result<24.9">
+        <p>Your bmi is {{result}}</p>
+        <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
+        
+        <p>You are normal</p>
+      </div>
+
+
   </body>
 </html>
 
