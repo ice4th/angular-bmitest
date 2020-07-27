@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 
 export class AppComponent  {
   name = 'Angular';
+  result = '555';
+  submit(weight:any, height:any) {
+     alert(weight)
+     alert(height)
+     const res = weight + height;
+     console.log(res);
+     
+  }
+
+  
 }
