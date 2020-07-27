@@ -17,7 +17,7 @@
     <form>
       <h4>BMI Calculator</h4>
       <label>Weight(kg.)</label><br>
-      <input  type="number" ng-model="weight" #Inputweight placeholder="weight in kilogram" /><br>
+      <input  type="number" ng-model="weight" #Inputweight placeholder="Weight in kilogram" /><br>
       <label>Height(m.)</label><br>
       <input  type="number" ng-model="height" #Inputheight placeholder="Height in meters" />
       <br>
@@ -25,42 +25,37 @@
       <button (click) = "submit(Inputweight.value, Inputheight.value)">submit</button>
     </form>
     <br>
+
     <div ngIf="submit">
-    <div *ngIf="result<18.5">
-      <p>Your bmi is {{result}}</p>
-      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-        
-      <p>You are underweight</p>
-    </div>
-    <div *ngIf="result>18.5 && result<=24.9">
-      <p>Your bmi is {{result}}</p>
-      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-      <p>You are normal</p>
-    </div>
+      <div *ngIf="result<18.5">
+        <p>Your bmi is {{result}}</p>
+        <img src = "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Wilma_Flintstone.png/165px-Wilma_Flintstone.png" height="150" width= "100">
+        <p>You are underweight</p>
+      </div>
 
-    <div *ngIf="result>24.9 && result<=29.9">
-      <p>Your bmi is {{result}}</p>
-      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-      <p>You are overweight</p>
-    </div>
+      <div *ngIf="result>=18.5 && result<23">
+        <p>Your bmi is {{result}}</p>
+        <img src = "https://www.calculateconvert.com/images/calculators/bmi/normal-weight-bmi.png" height="150" width= "100">
+        <p>You are normal weight</p>
+      </div>
 
-    <div *ngIf="result>29.9 && result<=34.9">
-      <p>Your bmi is {{result}}</p>
-      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-      <p>You are obese</p>
-    </div>
+      <div *ngIf="result>=23 && result<25">
+        <p>Your bmi is {{result}}</p>
+        <img src = "https://vignette.wikia.nocookie.net/flinstones/images/e/ee/The_Flintstones_-_Character_Profile_Image_-_Fred_Flintstone.png/revision/latest/scale-to-width-down/233?cb=20200128031714" height="150" width= "100">
+        <p>You are overweight</p>
+      </div>
 
-    <div *ngIf="result>34.9 && result<=34.9">
-      <p>Your bmi is {{result}}</p>
-      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-      <p>You are obese</p>
-    </div>
+      <div *ngIf="result>=25 && result<30">
+        <p>Your bmi is {{result}}</p>
+        <img src = "https://theunknownfatguy.com/wp-content/uploads/2020/01/ufg-favicon.png " height="150" width= "160">
+        <p>You are obese weight </p>
+      </div>
 
-    <div *ngIf="result>34.9">
-      <p>Your bmi is {{result}}</p>
-      <img src = "https://pm-international.com/blog/wp-content/uploads/2018/12/underweight.png" height="150" width= "100">
-      <p>You are extremly obese</p>
-    </div>
+      <div *ngIf="result>=30">
+        <p>Your bmi is {{result}}</p>
+        <img src = "https://www.nicepng.com/png/full/41-416689_share-this-image-homer-simpson-fat-png.png" height="150" width= "100">
+        <p>You are extremely obese</p>
+      </div>
     </div>
       
   </body>
