@@ -17,9 +17,9 @@
     <form id="form1">
       <h4>BMI Calculator</h4>
       <label>Weight(kg.)</label><br>
-      <input  ng-model="weight" #Inputweight placeholder="weight in kilogram" /><br>
+      <input  type="number" ng-model="weight" #Inputweight placeholder="weight in kilogram" /><br>
       <label>Height(m.)</label><br>
-      <input  ng-model="height" #Inputheight placeholder="Height in meters" />
+      <input  type="number" ng-model="height" #Inputheight placeholder="Height in meters" />
       <br>
       <br>
       <button (click) = "submit(Inputweight.value, Inputheight.value)">submit</button>
