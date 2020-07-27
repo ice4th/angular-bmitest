@@ -25,7 +25,7 @@
       <button (click) = "submit(Inputweight.value, Inputheight.value)">submit</button>
     </form>
     <br>
-
+<!-- problem ngIf ,dont show result<18.5 -->
     <div ngIf="submit">
       <div *ngIf="result<18.5">
         <p>Your bmi is {{result}}</p>
