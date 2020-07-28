@@ -26,7 +26,8 @@
     </form>
     <br>
 <!-- problem ngIf ,dont show result<18.5 -->
-    <div *ngIf="submit">
+    <!-- <div *ngIf="submit"> -->
+      <div ngIf="result">
       <div *ngIf="result<18.5">
         <p>Your bmi is {{result}}</p>
         <img src = "https://upload.wikimedia.org/wikipedia/en/thumb/9/97/Wilma_Flintstone.png/165px-Wilma_Flintstone.png" height="150" width= "100">
