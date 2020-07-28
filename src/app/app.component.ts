@@ -21,6 +21,8 @@ export class AppComponent  {
      console.log(res);
      
   }
-
   
 }
+export class NGIF {
+  submit: boolean= true;
+  }
